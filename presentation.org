@@ -75,17 +75,6 @@ Emacs has a killer toolkit available for building and customizing the perfect ed
 
 **** - Everything.
 
-#+BEGIN_SRC emacs-lisp
-  (read-string "Enter name: ")
-  (read-file-name "Enter file: ")
-  (read-directory-name "Enter directory: ")
-
-  (if-let ((file (read-file-name "Open File in Browser: ")))
-    (browse-url (format "file://%s" file)))
-
-  (browse-url (format "file://%s" (buffer-file-name)))
-#+END_SRC
-
 * 7. Modern Editor Feature Set
 
 ** Modern Editor Features
