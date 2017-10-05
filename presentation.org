@@ -1,0 +1,232 @@
+#+STARTUP: inlineimages
+
+* 1. Intro Slide
+
+
+
+
+
+
+** Introduction to Emacs
+*** Charleston Emacs Meetup
+*** By: Bryan Gilbert
+
+* 2. Topics
+
+** What This Talk Covers
+
+*** - What is Emacs?
+
+*** - Features / Packages
+
+*** - Basic Concepts
+
+*** - How to Get Started
+
+* 3. What is Emacs?
+
+** What is Emacs?
+
+*** * Lisp Runtime
+
+*** * Editor
+
+*** * Organizer
+
+*** * Email Client
+
+*** * Twitter Client
+
+*** * Web Browser
+
+*** * Power Point Replacement
+
+*** * Operating System?
+
+* 4. Extensibility 1
+
+** Hackable
+
+*** Emacs Lisp
+Emacs lisp, while not perfect, is a very capable programming language.
+
+**** - Functional Programming (sorta, kinda)
+**** - Macros
+**** - Hooks
+**** - Advic
+
+* 5. Extensibility 2
+
+** Hackable (con't)
+
+*** Toolkit
+Emacs has a killer toolkit available for building and customizing the perfect editor.
+
+**** - Advanced Text Processing
+**** - Buffers
+**** - Windows
+**** - Keybindings
+
+* 6. Extensibility 3
+
+** Hackable (con't)
+
+*** Everything Can Be Changed
+
+**** - Everything.
+
+#+BEGIN_SRC emacs-lisp
+  (read-string "Enter name: ")
+  (read-file-name "Enter file: ")
+  (read-directory-name "Enter directory: ")
+
+  (if-let ((file (read-file-name "Open File in Browser: ")))
+    (browse-url (format "file://%s" file)))
+
+  (browse-url (format "file://%s" (buffer-file-name)))
+#+END_SRC
+
+* 7. Modern Editor Feature Set
+
+** Modern Editor Features
+
+*** Advanced Text Editing Commands
+
+*** Code Completion
+
+*** Templating
+
+*** Robust Search / Replace
+
+*** Built in shell(s)
+
+*** All the other stuff too.
+
+* 8. Core Concepts
+
+** Core Concepts
+
+*** * Buffer
+Any text that you can edit resides within an object called a buffer.
+
+*** * Window
+A window is a UI element used to display a buffer.
+
+*** * Frame
+Analagous to an operating system "window", can be used to display one or more windows.
+
+*** * Minibuffer
+A special purpose buffer where Emacs commands read complicated arguments, such as file names, buffer names, etc.
+
+* 9. Killer Features
+
+** Killer Features
+
+*** Fully Keyboard Driven
+
+*** Evil
+
+*** Org-Mode
+
+*** Magit
+
+*** Projectile
+
+*** Helm/Ivy
+
+*** Tramp
+
+* 10. Fully Keyboard Driven
+
+** Fully Keyboard Driven
+
+*** - Every user action results in a function invocation
+
+*** - Robust key binding capabilities
+
+*** - Chords allow for flexibility
+
+*** - Emphasis on mnemonics
+
+* 11. Evil
+
+** Evil (Extensible VI Layer)
+
+*** - Robust featureful vim emulation
+
+*** - Does vim better than vim
+
+* 12. Org-Mode
+
+** Org-Mode
+
+*** - The ultimate organizer tool
+
+*** - Note taking
+
+*** - Todo list management
+
+*** - Agenda
+
+* 13. Magit
+
+** Magit (The Magical Git Client)
+
+*** - Wraps and improves almost every possible git command
+
+*** - Recent successful kickstarter (130%!)
+
+* 14. Projectile
+
+** Projectile
+
+*** Ad-hoc project support
+*** Open files / search in project
+*** Fast and requires no external dependencies
+
+* 15. Helm/Ivy
+
+** Helm/Ivy (completing-read)
+
+*** Nice interface for completing anything
+
+*** Support for a wide range of functionality
+
+* 16. Tramp
+
+** Tramp (Transparent Remote Access, Multiple Protocols)
+
+*** - Seamlessly edit files as if they were local
+
+*** - Speaks many different protocols (ssh, sftp, ftp, sudo)
+
+* 17. Getting Started
+
+** Getting Started (Use Spacemacs)
+
+*** No really ... use Spacemacs
+
+*** Batteries included
+
+*** Huge community
+
+*** Wealth of documentation
+
+* 18. Self Documenting
+
+** Use the Documentation Luke
+
+*** * describe-key (C-h k)
+
+*** * describe-function (C-h f)
+
+*** * describe-variable (C-h v)
+
+*** * describe-mode (C-h m)
+
+*** * describe-bindings (C-h b)
+
+*** * info (C-h i)
+
+
+  
